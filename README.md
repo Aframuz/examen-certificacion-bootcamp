@@ -1,6 +1,6 @@
 # Examen de Certificación
 
-## Caso "Bootcamp Estudiandtes Curso"
+## Caso "Bootcamp Estudiantes Curso"
 
 “Bootcamp Coders” es una academia dedicada a la entrega de servicios de capacitación orientados a la transformación digital, esto significa que se especializan principalmente en cursos de programación de sistemas web en diversos lenguajes de programación, como, por ejemplo, Fullstack Java, Fullstack Python, Fullstack JS, desarrollo Frontend con VUE, entre otros.
 
@@ -80,7 +80,7 @@ Uno de los gerentes de la academia ha solicitado algunos reportes de la base de 
 Se requiere construir una página web dinámica que permita el listado y búsqueda de estudiantes, tal como se detalle en la siguiente imagine mock-up.
 
 <p align="center">
-   <img src="../assets/images/example04.png">
+   <img src="../assets/images/example05.png">
 </p>
 
 Se pide:
@@ -95,11 +95,39 @@ Para realizar el requerimiento, el Scrum Master menciona lo siguiente:
 -  Utilizar Bootstrap para los elementos
 -  Tener en cuenta que el sitio debe ser responsivo al momento de implementar la vista
 
+### 3. Construcción de un algoritmo de cálculo de edad
+
+Una de las funcionalidades fundamentales del proyecto, es mantener la información de los estudiantes actualizada y disponible en el sistema web, de tal manera que cualquier usuario dentro de la organización pueda solicitar datos de estudiantes y contar con que el software le entregará lo solicitado de forma clara y rápida, para ello, se tiene en consideración incorporar más atributos a las diversas tablas definidas para complementar la información almacenada hasta el momento, como por ejemplo, la fecha de nacimiento de los estudiantes y/o tutores.
+
+En base a lo expuesto, a usted se le solicita realizar un algoritmo que permita calcular la edad de los estudiantes desde su fecha de nacimiento a la fecha en la cual se solicita esta información.
+
+Para realizar este cálculo se debe tener en consideración las siguientes instrucciones:
+
+-  La fecha de nacimiento se recibe como cadena de caracteres, se ha de manipular como un String para que de esta forma se pueda efectuar el cálculo de edad
+-  La fecha actual se ha de conseguir mediante instrucción del lenguaje a trabajar, esto significa que debemos investigar brevemente sobre alguna librería que nos pueda ayudar a obtener la fecha actual, en el caso que nos entregue algún tipo de dato diferente a una cadena de caracteres, se debe parsear para que se trabaje como un String
+-  Se debe obtener el año, mes y día de cada fecha para poder realizar los cálculos pertinentes, trabajar los tipos de datos apropiados para poder realizar las operaciones
+-  El método que calcule la edad debe retornar un entero con el resultado
+
+Se le provee un diagrama de clases para poder trabajar con este algoritmo:
+
+<p align="center">
+   <img src="../assets/images/example06.png">
+</p>
+
+Para hacer una demostración del algoritmo, cree una aplicación por consola que solicite 5 fechas por pantalla y se almacenen en objetos de tipo Estudiante, una fecha por un estudiante, para poder realizar el cálculo de la edad de cada uno, se debe mostrar la edad de cada estudiante por la consola.
+
+## Construcción de una API REST para aplicaciones móviles
+
+En vista y consideración que a futuro se piensa implementar una aplicación móvil que permita la consulta de los datos de un dispositivo móvil sin la necesidad de tener que ingresar al navegador, es que, se le solicita implementar una API Rest que entregue la misma información que el sistema de Estudiantes, recordar que debe recibir como parámetro la región y el curso.
+
 ## Observaciones
 
 psql insert win1252 charchters into a utf8 client
+
 Comunas - 17 Ollagüe - 280 O'Higgins
+
 table CURSO has fecha_termno instead of fecha_termino
+
 Ningun error con pgAdmin, en cambio con psql nada funcionaba 🤔
 
 ## TODOS
