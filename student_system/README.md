@@ -132,4 +132,5 @@ Ningun error con pgAdmin, en cambio con psql nada funcionaba 🤔
 
 ## TODOS
 
--  imgs README
+requisito 3
+requisito 4
