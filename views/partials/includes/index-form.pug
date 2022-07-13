@@ -1,0 +1,20 @@
+form(action="/" method="POST").row.g-3
+   .region-select.col-12.col-lg-4
+      label.form-label(for="region") Región
+      select#region.form-select(name="regionName" arial-label="Region" required)
+         option(value="" selected=true disabled) Elija una región
+         option(value="all") Todas las regiones
+         each region in regions
+            option(value=region.nombre) #{region.nombre}
+   
+   .course-select.col-12.col-lg-2
+      label.form-label(for="course") Curso
+      select#course.form-select(name="courseCode" arial-label="Curso" required)
+         option(value="" selected=true disabled) Elija un curso
+         option(value="all") Todos los cursos
+         each course in courses
+            option(value!=course.codigo_curso) #{course.codigo_curso}
+   .col-12.col-lg-3
+      .d-grid.gap-2.h-100
+         btn#filter.btn.btn-primary.fs-3.fw-bold.d-inline-flex.align-items-center.justify-content-center(type="submit")
+            span Filtrar
