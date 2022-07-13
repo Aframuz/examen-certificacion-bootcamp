@@ -27,7 +27,7 @@ A la fecha, ya se ha avanzado en el proyecto y se cuenta con el siguiente avance
 A continuación, se presenta el modelo de datos diseñado por el arquitecto en conjunto con un analista:
 
 <p align="center">
-   <img src="./assets/datamodel.png">
+   <img src="../assets/images/datamodel.png">
 </p>
 
 Como se puede observar, en primera instancia se definen los planes formativos que se ejecutan dentro de la academia, estos están compuestos por diversos módulos que le dan forma a cada plan.
@@ -54,25 +54,25 @@ Uno de los gerentes de la academia ha solicitado algunos reportes de la base de 
 -  Se requiere el listado de estudiantes del curso 0012, en donde, se muestre el rut, nombre, apellidos y comuna (nombre de la comuna), la salida debiese ser parecida a la siguiente imagen:
 
 <p align="center">
-   <img src="./assets/example01.png">
+   <img src="../assets/images/example01.png">
 </p>
 
 -  Se solicita el listado de cursos de todos los cursos existentes hasta el momento, se necesita mostrar el código del curso, fecha de inicio y termino, la descripción del curso (a que plan formativo corresponde, fullstack java, fullstack js, etc) y la duración en horas de cada uno, el reporte se debiese ver similar a lo siguiente:
 
 <p align="center">
-   <img src="./assets/example02.png">
+   <img src="../assets/images/example02.png">
 </p>
 
 -  Generar un reporte que muestra cada plan formativo con la cantidad de módulos de los que se compone, la salida debe ser similar a la siguiente:
 
 <p align="center">
-   <img src="./assets/example03.png">
+   <img src="../assets/images/example03.png">
 </p>
 
 -  Se necesita mostrar el listado de módulos de los que se componen todos los planes formativos asociados a FullStack, el reporte debe mostrar el código del plan formativo, la descripción del mismo, código de los módulos y la descripción de los mismos, el reporte debiese ser similar a lo siguiente:
 
 <p align="center">
-   <img src="./assets/example04.png">
+   <img src="../assets/images/example04.png">
 </p>
 
 ### 2. Construcción de Sistema de Estudiantes
@@ -80,7 +80,7 @@ Uno de los gerentes de la academia ha solicitado algunos reportes de la base de 
 Se requiere construir una página web dinámica que permita el listado y búsqueda de estudiantes, tal como se detalle en la siguiente imagine mock-up.
 
 <p align="center">
-   <img src="./assets/example04.png">
+   <img src="../assets/images/example04.png">
 </p>
 
 Se pide:
