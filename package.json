@@ -1,13 +1,26 @@
 {
    "name": "prueba_insignia",
    "version": "1.0.0",
-   "description": "",
+   "description": "Examen de Certificación Desafío LATAM",
    "main": "app.js",
    "scripts": {
       "dev": "nodemon app.js",
       "start": "node app.js"
    },
-   "keywords": [],
+   "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "Bootstrap",
+      "JQuery",
+      "pug",
+      "API REST",
+      "Postgresql",
+      "dotenv",
+      "pg"
+   ],
    "author": "Aframuz",
    "license": "ISC",
    "dependencies": {
