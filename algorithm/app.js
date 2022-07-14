@@ -1,3 +1,6 @@
+/*=============================================
+=                   IMPORTS                   =
+=============================================*/
 import figlet from "figlet"
 import chalk from "chalk"
 import inquirer from "inquirer"
@@ -5,17 +8,23 @@ import PressToContinuePrompt from "inquirer-press-to-continue"
 
 inquirer.registerPrompt("press-to-continue", PressToContinuePrompt)
 
+/*=============================================
+=              CLASS APPLICATION              =
+=============================================*/
 class DemoConsola {
-   #students = []
+   #students = [] // private list of students
+   // only init application
    constructor() {
       this.init()
    }
 
+   // Show app title and menu
    init() {
       console.log(chalk.yellow(figlet.textSync("Calcular Edad", { horizontalLayout: "full" })))
       this.mainMenu()
    }
 
+   // Main menu of the app
    mainMenu() {
       inquirer
          .prompt([
@@ -44,6 +53,7 @@ class DemoConsola {
          })
    }
 
+   // Input birthdate of a student, validate and create a new student with stump data
    inputDate() {
       inquirer
          .prompt([
@@ -56,6 +66,7 @@ class DemoConsola {
          ])
          .then((answer) => {
             const [day, month, year] = answer.date.split("/")
+            // create a new student!
             this.createStudent(new Date(`${year}-${month}-${day}`))
             console.log(chalk.green(`Estudiante creado con fecha de nacimiento ${answer.date}`))
             console.log(`Numero de estudiantes creados: ${chalk.green(this.#students.length)}`)
@@ -68,14 +79,17 @@ class DemoConsola {
          })
    }
 
+   // Create a student a store it in the list of students
    createStudent(date) {
       this.#students.push(new Estudiante(0, "11.111.111-1", "Doe", "Smith", "1234", date))
    }
 
+   // Return an array with the age of all students
    getAllAges() {
       return this.#students.map((student) => student.calculateAge())
    }
 
+   // Show the ages of all students in console
    showAllAges() {
       if (this.#students.length === 0) return console.log(chalk.bgRed("No hay estudiantes creados"))
       this.getAllAges().forEach((age, i) => {
@@ -83,6 +97,7 @@ class DemoConsola {
       })
    }
 
+   // 'Press any key to continue' prompt
    async awaitKey() {
       const anyKey = (
          await inquirer.prompt({
@@ -99,6 +114,7 @@ class DemoConsola {
       })
    }
 
+   // Validate date format
    validateDate(date) {
       if (!date.length) return chalk.bgRed("Por favor, ingrese una fecha de nacimiento")
       if (!date.match(/^\d{2}\/\d{2}\/\d{4}$/))
@@ -111,6 +127,9 @@ class DemoConsola {
    }
 }
 
+/*=============================================
+=                CLASS STUDENT                =
+=============================================*/
 class Estudiante {
    constructor(id, rut, lastNameDad, lastNameMom, address, birthDate) {
       let _id = id
@@ -136,6 +155,7 @@ class Estudiante {
       this.setBirthDate = (birthDate) => (_birthDate = birthDate)
    }
 
+   // Calculate age of the student
    calculateAge() {
       let today = new Date()
 
@@ -148,4 +168,7 @@ class Estudiante {
    }
 }
 
+/*=============================================
+=                    INIT                     =
+=============================================*/
 new DemoConsola()
