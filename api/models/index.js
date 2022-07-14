@@ -1,0 +1,7 @@
+exports.Region = require("./region")
+exports.District = require("./district")
+exports.Program = require("./program")
+exports.Module = require("./module")
+exports.Course = require("./course")
+exports.Tutor = require("./tutor")
+exports.Student = require("./student")
