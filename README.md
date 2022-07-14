@@ -122,15 +122,13 @@ En vista y consideración que a futuro se piensa implementar una aplicación mó
 
 ## Observaciones
 
-psql insert win1252 charchters into a utf8 client
+Error al insertar ciertos caracteres a la base de datos:
 
-Comunas - 17 Ollagüe - 280 O'Higgins
+-  psql insert win1252 characters into a utf8 client
+-  Culpables: table Comunas 17 Ollagüe / 280 O'Higgins
 
 table CURSO has fecha_termno instead of fecha_termino
 
-Ningun error con pgAdmin, en cambio con psql nada funcionaba 🤔
-
 ## TODOS
 
-requisito 3
-requisito 4
+-  [ ] add hal links to API
