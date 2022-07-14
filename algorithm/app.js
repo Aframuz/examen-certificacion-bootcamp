@@ -68,8 +68,6 @@ class DemoConsola {
             const [day, month, year] = answer.date.split("/")
             // create a new student!
             this.createStudent(new Date(`${year}-${month}-${day}`))
-            console.log(chalk.green(`Estudiante creado con fecha de nacimiento ${answer.date}`))
-            console.log(`Numero de estudiantes creados: ${chalk.green(this.#students.length)}`)
          })
          .catch((error) => {
             console.log(error)
@@ -82,6 +80,8 @@ class DemoConsola {
    // Create a student a store it in the list of students
    createStudent(date) {
       this.#students.push(new Estudiante(0, "11.111.111-1", "Doe", "Smith", "1234", date))
+      console.log(chalk.green(`Estudiante creado con fecha de nacimiento ${answer.date}`))
+      console.log(`Numero de estudiantes creados: ${chalk.green(this.#students.length)}`)
    }
 
    // Return an array with the age of all students
@@ -108,6 +108,7 @@ class DemoConsola {
          })
       ).key
 
+      // hack
       return new Promise((resolve) => {
          resolve("")
          console.log(anyKey.value ? "" : "error")
