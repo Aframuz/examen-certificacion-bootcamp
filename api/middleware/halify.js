@@ -51,9 +51,6 @@ const createResourceHal = (resource, schema, page, limit) => {
    }
 }
 
-const varToString = (varObj) => Object.keys(varObj)[0]
-const nameOf = (f) => f.toString().replace(/[ |\(\)=>]/g, "")
-
 module.exports = {
    createResourceHal,
 }
