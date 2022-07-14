@@ -18,13 +18,13 @@ CREATE TABLE Estudiante(id_estudiante INT, rut VARCHAR(15), nombre VARCHAR(30), 
 
 -- Queries
 -- 1. listado de estudiantes del curso 0012, en donde, se muestre el rut, nombre, apellidos y comuna (nombre de la comuna).
-SELECT e.rut, e.nombre, e.apellido_pat, e.apellido_mat, e.codigo_curso, comuna.nombre FROM Estudiante e LEFT JOIN comuna ON e.codigo_comuna = comuna.codigo_comuna WHERE e.codigo_curso = '0012';
+SELECT e.rut, e.nombre, e.apellido_pat, e.apellido_mat, e.codigo_curso, comuna.nombre FROM Estudiante e LEFT JOIN comuna ON e.codigo_comuna = comuna.codigo_comuna WHERE e.codigo_curso = '0012' ORDER BY e.rut ASC;
 
 -- 2. listado de cursos de todos los cursos existentes hasta el momento, se necesita mostrar el código del curso, fecha de inicio y termino, la descripción del curso la duración en horas de cada uno.
-SELECT c.codigo_curso, c.fecha_inicio, c.fecha_termno,plan_formativo.descripcion, plan_formativo.duracion_horas FROM curso c LEFT JOIN plan_formativo ON c.codigo_plan_formativo = plan_formativo.codigo_plan_formativo;
+SELECT c.codigo_curso, c.fecha_inicio, c.fecha_termno,plan_formativo.descripcion, plan_formativo.duracion_horas FROM curso c LEFT JOIN plan_formativo ON c.codigo_plan_formativo = plan_formativo.codigo_plan_formativo ORDER BY c.codigo_curso ASC;
 
 -- 3. listado de cada plan formativo con la cantidad de módulos de los que se compone
-SELECT plan_formativo.descripcion, COUNT(modulo.codigo_modulo) FROM plan_formativo LEFT JOIN plan_modulo ON plan_formativo.codigo_plan_formativo = plan_modulo.codigo_plan_formativo LEFT JOIN modulo ON plan_modulo.codigo_modulo = modulo.codigo_modulo GROUP BY plan_formativo.codigo_plan_formativo;
+SELECT pf.codigo_plan_formativo, pf.descripcion, COUNT(modulo.codigo_modulo) as cantidad_modulos FROM plan_formativo pf LEFT JOIN plan_modulo pm ON pf.codigo_plan_formativo = pm.codigo_plan_formativo LEFT JOIN modulo ON pm.codigo_modulo = modulo.codigo_modulo GROUP BY pf.codigo_plan_formativo ORDER BY cantidad_modulos ASC;
 
 -- 4. listado de módulos de los que se componen todos los planes formativos asociados a FullStack, el reporte debe mostrar el código del plan formativo, la descripción del mismo, código de los módulos y la descripción de los mismos
 SELECT plan_formativo.codigo_plan_formativo, plan_formativo.descripcion, modulo.codigo_modulo, modulo.descripcion FROM plan_formativo LEFT JOIN plan_modulo ON plan_formativo.codigo_plan_formativo = plan_modulo.codigo_plan_formativo LEFT JOIN modulo ON plan_modulo.codigo_modulo = modulo.codigo_modulo WHERE plan_formativo.descripcion ~ 'FullStack';
