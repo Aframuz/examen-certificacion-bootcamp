@@ -7,7 +7,14 @@
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
    },
-   "keywords": [],
+   "keywords": [
+      "Javascript",
+      "inquirer",
+      "console",
+      "algorithm",
+      "chalk",
+      "figlet"
+   ],
    "author": "",
    "license": "ISC",
    "dependencies": {

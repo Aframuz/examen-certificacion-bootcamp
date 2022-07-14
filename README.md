@@ -1,4 +1,4 @@
-# Examen de Certificación
+# [Examen de Certificación](https://github.com/Aframuz/examen-certificacion-bootcamp)
 
 ## Caso "Bootcamp Estudiantes Curso"
 
@@ -116,11 +116,31 @@ Se le provee un diagrama de clases para poder trabajar con este algoritmo:
 
 Para hacer una demostración del algoritmo, cree una aplicación por consola que solicite 5 fechas por pantalla y se almacenen en objetos de tipo Estudiante, una fecha por un estudiante, para poder realizar el cálculo de la edad de cada uno, se debe mostrar la edad de cada estudiante por la consola.
 
-## Construcción de una API REST para aplicaciones móviles
+### 4. Construcción de una API REST para aplicaciones móviles
 
 En vista y consideración que a futuro se piensa implementar una aplicación móvil que permita la consulta de los datos de un dispositivo móvil sin la necesidad de tener que ingresar al navegador, es que, se le solicita implementar una API Rest que entregue la misma información que el sistema de Estudiantes, recordar que debe recibir como parámetro la región y el curso.
 
+### Donde Encontrar cada requerimiento
+
+1. Dentro de la carpeta db_queries/
+2. Dentro de la carpeta student_system/
+3. Dentro de la carpeta algorithm/
+4. Dentro de la carpeta api/
+
 ## Observaciones
+
+Uso de pnpm con packages:
+
+-  dotenv
+-  express
+-  pg
+-  pug
+-  chalk
+-  figlet
+-  inquirer
+-  inquirer-press-to-continue
+
+Algoritmo de calculo de edad en ESM debido a retricciones de los packages
 
 Error al insertar ciertos caracteres a la base de datos:
 
